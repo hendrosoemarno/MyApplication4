@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="jk">Jenis Kelamin :</string>
+    <string name="nama">Nama :</string>
+    <string name="nama_hint">Nama Anda</string>
+    <string name="email">Email :</string>
+    <string name="email_hint">nama@gmail.com</string>
+    <string name="password">Password :</string>
+    <string name="password_hint">Password</string>
+    <string name="no_tlp">No. Tlp :</string>
+    <string name="tlp_hint">No. Tlp (0851****)</string>
+    <string name="alamat">Alamat :</string>
+    <string name="alamat_hint">Alamat Anda</string>
+    <string name="laki">Laki-laki</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="ok">OK</string>
+    <string name="batal">BATAL</string>
+    <string name="data_tersimapan">Data Sudah Tersimpan</string>
+    <string name="nama_">"\nNama : "</string>
+    <string name="jk_">"\nJenis Kelamin : "</string>
+    <string name="jk__">JK :</string>
 </resources>

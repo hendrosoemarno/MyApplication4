@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hello.sarpraprogramer.myapplication.MainActivity">
+    <!--padding antara conten dan child, margin jarak antar komponen, padding start untuk batas kiri -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="REGISTRASI"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ts" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/nama"
+                android:textAlignment="textEnd"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/eNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/nama_hint"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/email"
+                android:textAlignment="textEnd"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/eEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/password"
+                android:textAlignment="textEnd"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/ePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/no_tlp"
+                android:textAlignment="textEnd"
+                android:textSize="20sp" />
+
+            <!--            <EditText
+                            android:id="@+id/eTlp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/tlp_hint"
+                            android:inputType="phone" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <EditText
+                    android:id="@+id/eTlp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:hint="@string/tlp_hint"
+                    android:inputType="phone" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="49dp"
+                    android:layout_height="44dp"
+                    android:onClick="iCall"
+                    app:srcCompat="@drawable/phone" />
+
+            </LinearLayout>
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:text="@string/alamat"
+                android:gravity="center"
+                android:textAlignment="textEnd"
+                android:textSize="20sp" />
+
+            <LinearLayout>
+
+                <EditText
+                    android:id="@+id/eAlamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:hint="@string/alamat_hint"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="49dp"
+                    android:layout_height="44dp"
+                    android:onClick="iMap"
+                    app:srcCompat="@drawable/googlemaps" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/jk__"
+                android:textAlignment="textEnd"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!--shift F6 biar berganti semua-->
+                <RadioButton
+                    android:id="@+id/RBLaki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:onClick="cRBLaki"
+                    android:text="@string/laki" />
+
+                <RadioButton
+                    android:id="@+id/RBPerempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:onClick="cRBPerempuan"
+                    android:text="@string/perempuan" />
+
+
+            </LinearLayout>
+
+
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+
+            android:text="@string/ok" />
+
+        <Button
+            android:id="@+id/bBatal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+
+            android:text="@string/batal" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="49dp"
+            android:layout_height="44dp"
+            android:onClick="iShare"
+            app:srcCompat="@drawable/share3" />
+    </LinearLayout>
+
+
+</LinearLayout>
